@@ -6,3 +6,35 @@ Prof Ricardo Mendes | Turma CC5M | 2022/1 |
 BY Ricardo Mendes
 
 > PFCC5M-WEB [Snippetbox](https://pfcc5m-web.suellenmayuko.repl.co/)
+
+~~~Bash
+cmd executar antes
+$ cd snippetbox
+$ go run main.go
+~~~
+
+~~~Bash
+cmd executar depois
+$ cd snippetbox
+$ go run cmd/web/*
+~~~
+
+~~~Bash
+cmd line flags
+$ go run cmd/web/* -addr=":80"
+~~~
+
+~~~ 
+Testes
+•Certas:
+
+http://localhost:4000/snippet?id=123
+
+•Erros:
+
+http://localhost:4000/snippet
+
+http://localhost:4000/snippet?id=-1
+
+http://localhost:4000/snippet?id=foo
+~~~
