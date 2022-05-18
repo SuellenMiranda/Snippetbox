@@ -12,5 +12,5 @@ type Snippet struct{
   Title string
   Content string
   Create time.Time
-  Expired time.Time
+  Expires time.Time
 }

@@ -3,6 +3,33 @@
 {{define "title"}} Home {{end}}
 
 {{define "body"}}
-<h2>Últimas novidades</h2>
-<p>Lamentamos... Ainda não temos algo a mostrar. :')</p>
+
+<h2>Últimos Snippets</h2>
+
+  {{if.}}
+      <table>
+        <tr>
+          <th>Tilulo</th>
+          <th>Created</th>
+          <th>Id</th>
+        </tr>
+        
+        {{range .}}
+        
+          <tr>
+            <td> <a href="/snipppet?id={{.ID}}">{{.Title}}</a></td>
+            <td>{{.Created}}</td>
+            <td>#{{.ID}}</td>
+          </tr>
+        
+        {{end}}
+        
+      </table>
+
+  {{else}}
+
+    <p>Nenhum Snippet válido no momento ...</p>
+
+  {{end}}
+
 {{end}}

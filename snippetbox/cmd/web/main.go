@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 	"os"
-  
-  _"github.com/go-sql-driver/mysql"
+
+	_ "github.com/go-sql-driver/mysql"
   "github.com/Suellen-Kitten/PF_CC5M-WEB/pkg/models/mysql"
 )
 
@@ -20,6 +20,7 @@ type application struct{
 //curl -i -X GET http://localhost:4000/snippetbox/create
 func main() {
   //nome da flag, valor padrão e drescrição
+  /*olhar banco de dados */
   addr := flag.String("addr", ":4000", "Porta da Rede")
   dsn := flag.String("dsn",  
                      "qx8M4jivY9:X0shBFMXzG@tcp(remotemysql.com)/qx8M4jivY9?parseTime=true", 
